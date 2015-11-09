@@ -27,7 +27,7 @@ export default function createElementOfTypeChecker(elementType) {
       return new Error(errBeginning + ', got something that is not an Element.');
     }
     if (props[propName].type !== elementType) {
-      var invalidElementName = props[propName].type.displayName ||
+      const invalidElementName = props[propName].type.displayName ||
         props[propName].type.name ||
         props[propName].type;
       return new Error(errBeginning + ', got a `' + invalidElementName + '` Element instead.');
